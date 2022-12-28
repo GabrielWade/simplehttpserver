@@ -1,0 +1,9 @@
+services:
+  http_server:
+    build: .
+    container_name: http_server
+    volumes:
+      - ./src:/src
+    ports: 
+      - 8080:8000
+    command: python3 http_server.py
